@@ -1,0 +1,22 @@
+.global-card {
+  background-color: var(--color-primary);
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 20px 0;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+}
+
+@media (min-width: 375px) {
+  .global-card {
+    padding: 40px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .global-card {
+    padding: 40px 50px;
+  }
+}

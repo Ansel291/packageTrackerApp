@@ -1,0 +1,89 @@
+form h2 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: 600;
+}
+form .btn {
+  width: 100%;
+  margin-top: 10px;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(26 26 26 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(26 26 26 / 59%);
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.form-checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type='checkbox'] {
+  /*width: 20px;
+    height: 20px;*/
+  margin-right: 7.5px;
+}
+
+.float-left {
+  float: left;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 5px 0 17.5px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.backordered-label {
+  color: #727272;
+}
+
+.order-number-message {
+  position: relative;
+  height: 0px;
+  top: -17px;
+  left: 1px;
+  color: #e14a4a;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .backordered-label {
+    color: #646464;
+  }
+  .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form-item {
+    width: 294px;
+  }
+}

@@ -1,0 +1,94 @@
+.order-card {
+  transition: 0.3s all ease-in;
+  background-color: var(--color-primary);
+  color: #333;
+  border-radius: 15px;
+  padding: 45px 20px;
+  margin: 20px 0;
+  position: relative;
+  border-right: 15px solid transparent;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+}
+
+.backordered {
+  border-right: 15px solid #ff3f3f;
+}
+
+.order-status-display {
+  position: relative;
+  background: #f4f4f4;
+  width: 50px;
+  height: 50px;
+  padding: 11px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 19px;
+  border: 1px #eee solid;
+  transition: 0.3s all ease-in;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(96 96 96 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(96 96 96 / 59%);
+}
+
+.order-status-display {
+  color: var(--color-primary);
+}
+
+.order-status-display {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.close,
+.edit {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+.order-item-order-received {
+  background: var(--color-order-received);
+}
+
+.order-item-label-created {
+  background: var(--color-label-created);
+}
+.order-item-in-transit {
+  background: var(--color-in-transit);
+}
+
+.order-item-order-delivered {
+  background: var(--color-order-delivered);
+}
+
+.color-order-received svg,
+.color-label-created svg,
+.color-in-transit svg,
+.color-order-delivered svg {
+  color: var(--color-primary);
+}
+
+.order-notes {
+  margin-top: 15px;
+}
+
+.order-number-label {
+  font-weight: 600;
+}
+
+@media (min-width: 375px) {
+  .order-card {
+    padding: 40px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-card {
+    padding: 40px 50px;
+  }
+}

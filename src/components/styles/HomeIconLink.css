@@ -1,0 +1,41 @@
+.home-link {
+  display: none;
+  position: absolute;
+  top: -81px;
+  left: -0.5px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+.home-link:hover {
+  transform: scale(1.1);
+}
+
+.home-link a {
+  color: #d7d7d7;
+  transition: 0.2s all ease-in;
+}
+
+.home-link a:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 375px) {
+  .home-link {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-link {
+    position: fixed;
+    top: initial;
+    left: initial;
+    bottom: 12.5px;
+    right: 18.5px;
+  }
+  .home-link a {
+    color: #e9e9e9;
+  }
+}

@@ -1,0 +1,15 @@
+.about h1 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin: 20px 0 0;
+}
+
+.about a {
+  color: #5697b7;
+}
+
+.about p span {
+  font-weight: 700;
+}

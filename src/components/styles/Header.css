@@ -1,0 +1,35 @@
+header {
+  height: 70px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #3f6f87;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container h2 {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.package-icon {
+  margin-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .header-container h2 {
+    font-size: 24px;
+  }
+}

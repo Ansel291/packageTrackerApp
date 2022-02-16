@@ -1,0 +1,154 @@
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 37.5px 0 75px;
+  position: relative;
+  z-index: 1;
+}
+
+.status li {
+  position: relative;
+  background: #c5c5c5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.status li label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+}
+
+.status li svg {
+  color: #fff;
+}
+
+.status li p {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 17px;
+}
+
+[type='radio'] {
+  opacity: 0;
+}
+
+[type='radio']:checked ~ label.order-select-order-received,
+label.order-select-order-received:hover {
+  background: var(--color-order-received);
+}
+
+[type='radio']:checked ~ label.order-select-label-created,
+label.order-select-label-created:hover {
+  background: var(--color-label-created);
+}
+
+[type='radio']:checked ~ label.order-select-in-transit,
+label.order-select-in-transit:hover {
+  background: var(--color-in-transit);
+}
+
+[type='radio']:checked ~ label.order-select-order-delivered,
+label.order-select-order-delivered:hover {
+  background: var(--color-order-delivered);
+}
+
+.progress-bar {
+  height: 1px;
+  background-color: #b5b5b5;
+  position: relative;
+  top: -100px;
+  z-index: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.progress-order-received {
+  width: 0%;
+}
+
+.progress-label-created {
+  width: 30%;
+}
+
+.progress-in-transit {
+  width: 60%;
+}
+
+.progress-order-delivered {
+  width: 100%;
+}
+
+@media (min-width: 375px) {
+  .status {
+    margin: 37.5px 0 75px;
+  }
+  .status li p {
+    font-size: 12px;
+    margin-top: 42.5px;
+  }
+  .status li {
+    width: 60px;
+    height: 60px;
+  }
+  .status li label {
+    width: 60px;
+    height: 60px;
+  }
+  .status li svg {
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+  .progress-bar {
+    top: -105px;
+  }
+}
+
+@media (min-width: 768px) {
+  .status {
+    margin: 32.5px 0 75px;
+  }
+  .status li p {
+    font-size: 12px;
+    margin-top: 82.5px;
+    line-height: 21px;
+  }
+  .status li {
+    width: 100px;
+    height: 100px;
+  }
+  .status li label {
+    width: 100px;
+    height: 100px;
+  }
+  .status li svg {
+    top: 20px;
+    left: 20px;
+    width: 2.5em;
+    height: 2.5em;
+  }
+  .order-status-br {
+    display: none;
+  }
+  .space {
+    margin-right: 2px;
+  }
+  .progress-bar {
+    background-color: #858585;
+    top: -125px;
+  }
+}

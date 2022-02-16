@@ -1,0 +1,53 @@
+.open-order-title {
+  text-align: center;
+}
+
+.order-stat-item {
+  padding: 7px 27.5px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+}
+
+.order-stat-order-received {
+  background: var(--color-order-received);
+}
+
+.order-stat-label-created {
+  background: var(--color-label-created);
+}
+
+.order-stat-in-transit {
+  background: var(--color-in-transit);
+}
+
+.order-stat-order-delivered {
+  background: var(--color-order-delivered);
+}
+
+.order-stat-label {
+  font-weight: 600;
+  letter-spacing: 0.25px;
+}
+
+.order-stats-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .order-stats-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .order-stat-item {
+    width: 175px;
+    margin: 15px 0px 10px;
+  }
+}
