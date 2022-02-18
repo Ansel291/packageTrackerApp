@@ -1,11 +1,15 @@
 import './styles/OrderItem.css'
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaEdit } from 'react-icons/fa'
+import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { IconContext } from 'react-icons/lib'
 import { MdCallReceived, MdNewLabel, MdLocalShipping } from 'react-icons/md'
 import { RiUserReceived2Fill } from 'react-icons/ri'
+import OrderContext from '../context/OrderContext'
 
-function OrderItem({ item, handleDelete }) {
+function OrderItem({ item }) {
+  const { deleteOrder, editOrder } = useContext(OrderContext)
+
   return (
     <IconContext.Provider
       value={{
@@ -33,8 +37,11 @@ function OrderItem({ item, handleDelete }) {
             <RiUserReceived2Fill />
           </div>
         )}
-        <button onClick={() => handleDelete(item.id)} className='close'>
+        <button onClick={() => deleteOrder(item.id)} className='close'>
           <FaTimes />
+        </button>
+        <button onClick={() => editOrder(item)} className='edit'>
+          <FaEdit />
         </button>
         <div className='order-number-display'>
           <span className='order-number-label'>Order Number: </span>

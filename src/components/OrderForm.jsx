@@ -1,18 +1,36 @@
 import './styles/OrderForm.css'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import OrderStatusSelect from './OrderStatusSelect'
+import OrderContext from '../context/OrderContext'
 
-function OrderForm({ handleAdd }) {
+function OrderForm() {
   const [orderStatus, setOrderStatus] = useState('orderReceived')
+  //const [orderStatus, setOrderStatus] = useState('')
   const [orderNumber, setOrderNumber] = useState('')
   const [orderHasNotes, setOrderHasNotes] = useState(false)
   const [orderNote, setOrderNote] = useState('')
   const [orderBackordered, setOrderBackordered] = useState(false)
-
+  const [orderProgress, setOrderProgress] = useState('progress-order-received')
   const [btnDisabled, setBtnDisabled] = useState(true)
+  const [orderUpdate, setOrderUpdated] = useState(false)
   const [orderNumberMessage, setOrderNumberMessage] = useState('')
+
+  const { addOrder, orderEdit, updateOrder } = useContext(OrderContext)
+
+  useEffect(() => {
+    if (orderEdit.edit === true) {
+      setBtnDisabled(false)
+      setOrderUpdated(true)
+      setOrderStatus(orderEdit.item.orderStatus)
+      setOrderNumber(orderEdit.item.orderNumber)
+      setOrderHasNotes(orderEdit.item.orderHasNotes)
+      setOrderNote(orderEdit.item.orderNote)
+      setOrderBackordered(orderEdit.item.orderBackordered)
+      setOrderProgress(orderEdit.item.orderProgress)
+    }
+  }, [orderEdit])
 
   const handleOrderNumberTextChange = (e) => {
     let orderNumberTextVal = e.target.value.trim()
@@ -67,17 +85,6 @@ function OrderForm({ handleAdd }) {
 
   const handleBackorderChange = (e) => {
     setOrderBackordered(!orderBackordered)
-    /*
-    //console.log(e.target.checked)
-    let backorderChecked = e.target.checked
-    if (backorderChecked) {
-      setOrderHasNotes(true)
-      setOrderNote('Backordered')
-    } else {
-      setOrderHasNotes(false)
-      setOrderNote('')
-    }
-    */
   }
 
   const handleSubmit = (e) => {
@@ -85,7 +92,7 @@ function OrderForm({ handleAdd }) {
     //console.log('handle submit click')
     let orderNumberTextValOnSubmit = orderNumber.trim()
 
-    console.log(orderNumberTextValOnSubmit)
+    //console.log(orderNumberTextValOnSubmit)
     if (
       orderNumberTextValOnSubmit.charAt(0) === 'L' &&
       orderNumberTextValOnSubmit.indexOf('LG-') <= 0 &&
@@ -97,22 +104,43 @@ function OrderForm({ handleAdd }) {
         orderHasNotes,
         orderNote,
         orderBackordered,
+        orderProgress,
       }
-      handleAdd(newOrder)
 
+      if (orderEdit.edit === true) {
+        updateOrder(orderEdit.item.id, newOrder)
+        /*
+        setOrderProgress('progress-order-received')
+        */
+        //setProgressBarWidth('progress-order-received')
+      } else {
+        addOrder(newOrder)
+        //console.log(orderEdit.edit)
+      }
+
+      setOrderStatus('orderReceived')
       setOrderNumber('')
-      setOrderNote('')
       setOrderHasNotes(false)
+      setOrderNote('')
       setOrderBackordered(false)
+      setOrderProgress('progress-order-received')
+      setBtnDisabled(true)
+      setOrderUpdated(false)
     }
   }
 
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>What is the status of this Package?</h2>
+        <h2>
+          {orderUpdate ? 'Update' : 'What is'} the status of this Package
+          {orderUpdate ? '' : '?'}
+        </h2>
 
-        <OrderStatusSelect orderSelect={(select) => setOrderStatus(select)} />
+        <OrderStatusSelect
+          progressBar={(status) => setOrderProgress(status)}
+          orderSelect={(select) => setOrderStatus(select)}
+        />
 
         <div className='form-row'>
           <div className='form-item'>
@@ -163,7 +191,7 @@ function OrderForm({ handleAdd }) {
         </div>
 
         <Button type='submit' isDisabled={btnDisabled}>
-          Send
+          {orderUpdate ? 'Update' : 'Send'}
         </Button>
       </form>
     </Card>

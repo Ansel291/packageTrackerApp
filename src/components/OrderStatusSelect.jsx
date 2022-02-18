@@ -1,26 +1,46 @@
 import './styles/OrderStatusSelect.css'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { IconContext } from 'react-icons/lib'
 import { MdCallReceived, MdNewLabel, MdLocalShipping } from 'react-icons/md'
 import { RiUserReceived2Fill } from 'react-icons/ri'
+import OrderContext from '../context/OrderContext'
 
-function OrderStatusSelect({ orderSelect }) {
+function OrderStatusSelect({ orderSelect, progressBar }) {
   const [orderSelected, setOrderSelected] = useState('orderReceived')
+  //const [orderSelected, setOrderSelected] = useState('')
   const [progressBarWidth, setProgressBarWidth] = useState(
     'progress-order-received'
   )
+
+  const { orderEdit } = useContext(OrderContext)
+
+  useEffect(() => {
+    if (orderEdit.edit === true) {
+      console.log('the order edit selected is true')
+      setOrderSelected(orderEdit.item.orderStatus)
+      setProgressBarWidth(orderEdit.item.orderProgress)
+      //orderEdit.edit = false
+    } /*else {
+      setOrderSelected('orderReceived')
+      setProgressBarWidth('progress-order-received')
+    }*/
+  }, [orderEdit])
 
   const handleChange = (e) => {
     setOrderSelected(e.currentTarget.value)
     orderSelect(e.currentTarget.value)
     if (e.currentTarget.value === 'orderReceived') {
       setProgressBarWidth('progress-order-received')
+      progressBar('progress-order-received')
     } else if (e.currentTarget.value === 'labelCreated') {
       setProgressBarWidth('progress-label-created')
+      progressBar('progress-label-created')
     } else if (e.currentTarget.value === 'orderInTransit') {
       setProgressBarWidth('progress-in-transit')
+      progressBar('progress-in-transit')
     } else if (e.currentTarget.value === 'orderDelivered') {
       setProgressBarWidth('progress-order-delivered')
+      progressBar('progress-order-delivered')
     }
   }
 
@@ -65,7 +85,10 @@ function OrderStatusSelect({ orderSelect }) {
             <MdNewLabel />
           </label>
 
-          <p className='status-title'>Label Created</p>
+          <p className='status-title'>
+            Label<span className='space'></span>
+            <br className='order-status-br' /> Created
+          </p>
         </li>
         <li>
           <input

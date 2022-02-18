@@ -1,8 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import PropTypes from 'prop-types'
+import { useContext } from 'react'
 import OrderItem from './OrderItem'
+import OrderContext from '../context/OrderContext'
 
-function OrderList({ order, handleDelete }) {
+function OrderList() {
+  const { order } = useContext(OrderContext)
+
   if (!order || order.length === 0) {
     return <p>No Order Yet</p>
   }
@@ -16,25 +19,12 @@ function OrderList({ order, handleDelete }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <OrderItem key={item.id} item={item} handleDelete={handleDelete} />
+            <OrderItem key={item.id} item={item} />
           </motion.div>
         ))}
       </AnimatePresence>
     </div>
   )
-}
-
-OrderList.propTypes = {
-  order: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      orderStatus: PropTypes.string.isRequired,
-      orderNumber: PropTypes.string.isRequired,
-      orderHasNotes: PropTypes.bool.isRequired,
-      orderNote: PropTypes.string.isRequired,
-      orderBackordered: PropTypes.bool.isRequired,
-    })
-  ),
 }
 
 export default OrderList

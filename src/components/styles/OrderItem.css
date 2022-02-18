@@ -48,7 +48,11 @@
   cursor: pointer;
   background: none;
   border: none;
-  color: #333;
+  color: #484848;
+}
+
+.edit {
+  right: 35px;
 }
 
 .order-item-order-received {
@@ -90,5 +94,8 @@
 @media (min-width: 768px) {
   .order-card {
     padding: 40px 50px;
+  }
+  .edit {
+    right: 37px;
   }
 }

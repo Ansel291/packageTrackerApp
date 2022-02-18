@@ -1,7 +1,10 @@
 import './styles/OrderStats.css'
-import PropTypes from 'prop-types'
+import { useContext } from 'react'
+import OrderContext from '../context/OrderContext'
 
-function OrderStats({ order }) {
+function OrderStats() {
+  const { order } = useContext(OrderContext)
+
   let totalOrderReceived = order.filter(
     (item) => item.orderStatus === 'orderReceived'
   )
@@ -47,10 +50,6 @@ function OrderStats({ order }) {
       </div>
     </>
   )
-}
-
-OrderStats.propTypes = {
-  order: PropTypes.array.isRequired,
 }
 
 export default OrderStats

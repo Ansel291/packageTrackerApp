@@ -89,7 +89,7 @@ label.order-select-order-delivered:hover {
 }
 
 .progress-order-delivered {
-  width: 100%;
+  width: 99%;
 }
 
 @media (min-width: 375px) {
@@ -118,6 +118,34 @@ label.order-select-order-delivered:hover {
   }
 }
 
+@media (min-width: 768px) {
+  .status {
+    margin: 32.5px 0 77.5px;
+  }
+  .status li p {
+    margin-top: 75px;
+  }
+  .status li {
+    width: 90px;
+    height: 90px;
+  }
+  .status li label {
+    width: 90px;
+    height: 90px;
+  }
+  .status li svg {
+    top: 20px;
+    left: 20px;
+    width: 2.05em;
+    height: 2.05em;
+  }
+  .progress-bar {
+    background-color: #858585;
+    top: -123px;
+  }
+}
+
+/*
 @media (min-width: 768px) {
   .status {
     margin: 32.5px 0 75px;
@@ -152,3 +180,4 @@ label.order-select-order-delivered:hover {
     top: -125px;
   }
 }
+*/
