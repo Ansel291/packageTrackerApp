@@ -47,7 +47,7 @@
 
 @media (min-width: 768px) {
   .order-stats-container {
-    margin-bottom: 0px;
+    margin: 22.5px 0 0;
   }
   .order-stats-row {
     flex-direction: row;
