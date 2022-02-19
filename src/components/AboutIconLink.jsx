@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom'
 
 function AboutIconLink() {
   return (
-    <IconContext.Provider
-      value={{
-        size: '2em',
-      }}
-    >
+    <IconContext.Provider value={{}}>
       <div className='about-link'>
         <Link to='/about'>
           <IoIosInformationCircleOutline />
