@@ -26,14 +26,9 @@
   color: var(--color-primary);
 }
 
-@media (min-width: 375px) {
-  .home-link {
-    display: block;
-  }
-}
-
 @media (min-width: 900px) {
   .home-link {
+    display: block;
     position: fixed;
     top: initial;
     left: initial;
