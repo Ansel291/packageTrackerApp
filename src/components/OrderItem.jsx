@@ -12,11 +12,7 @@ function OrderItem({ item }) {
   const { deleteOrder, editOrder } = useContext(OrderContext)
 
   return (
-    <IconContext.Provider
-      value={{
-        size: '1.3em',
-      }}
-    >
+    <IconContext.Provider value={{}}>
       <div className={`order-card ${item.orderBackordered && 'backordered'}`}>
         {item.orderStatus === 'orderReceived' && (
           <div className='order-status-display order-item-order-received'>
@@ -38,9 +34,9 @@ function OrderItem({ item }) {
             <RiUserReceived2Fill />
           </div>
         )}
-        <button onClick={() => deleteOrder(item.id)} className='close'>
+        <Link onClick={() => deleteOrder(item.id)} className='close'>
           <FaTimes />
-        </button>
+        </Link>
         <Link
           to='header'
           smooth={true}

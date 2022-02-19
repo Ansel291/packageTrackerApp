@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   top: -76px;
-  left: -1.5px;
+  left: -1px;
   color: var(--color-primary);
   cursor: pointer;
   transition: 0.2s all ease-in;
@@ -18,17 +18,22 @@
 }
 
 .home-link a svg {
-  width: 1.4em;
-  height: 1.4em;
+  width: 1.3em;
+  height: 1.3em;
 }
 
 .home-link a:hover {
   color: var(--color-primary);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 375px) {
   .home-link {
     display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-link {
     position: fixed;
     top: initial;
     left: initial;

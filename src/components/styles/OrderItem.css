@@ -14,8 +14,6 @@
 .order-card a svg {
   width: 1em;
   height: 1em;
-  position: relative;
-  top: -1.5px;
 }
 
 .backordered {

@@ -46,6 +46,9 @@
 }
 
 @media (min-width: 768px) {
+  .order-stats-container {
+    margin-bottom: 0px;
+  }
   .order-stats-row {
     flex-direction: row;
     justify-content: space-between;
