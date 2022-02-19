@@ -13,8 +13,8 @@
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
-  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .order-stat-order-received {

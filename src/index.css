@@ -6,6 +6,7 @@
   --color-label-created: #ff3f3f;
   --color-in-transit: #48b9fb;
   --color-order-delivered: #54d175;
+  --box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 45%);
 }
 
 * {

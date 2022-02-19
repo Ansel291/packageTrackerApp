@@ -5,8 +5,8 @@
   padding: 40px 20px;
   margin: 20px 0;
   position: relative;
-  -webkit-box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
-  box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 @media (min-width: 375px) {

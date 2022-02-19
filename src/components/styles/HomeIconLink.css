@@ -37,14 +37,14 @@
     position: fixed;
     top: initial;
     left: initial;
-    bottom: 12.5px;
-    right: 18.5px;
+    bottom: 14.5px;
+    right: 19.5px;
   }
   .home-link a {
     color: #e9e9e9;
   }
   .home-link a svg {
-    width: 1.7em;
-    height: 1.7em;
+    width: 1.4875em;
+    height: 1.4875em;
   }
 }

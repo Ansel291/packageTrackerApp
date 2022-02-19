@@ -45,11 +45,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
   }
 
   return (
-    <IconContext.Provider
-      value={{
-        size: '2em',
-      }}
-    >
+    <IconContext.Provider value={{}}>
       <ul className='status'>
         <li>
           <input
