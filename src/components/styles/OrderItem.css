@@ -11,6 +11,13 @@
   box-shadow: 4px 4px 10px -2px rgb(59 59 59 / 59%);
 }
 
+.order-card a svg {
+  width: 1.1em;
+  height: 1.1em;
+  position: relative;
+  top: -0.5px;
+}
+
 .backordered {
   border-right: 15px solid #ff3f3f;
 }
