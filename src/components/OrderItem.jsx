@@ -43,7 +43,7 @@ function OrderItem({ item }) {
           duration={300}
           spy={true}
           exact='true'
-          offset={0}
+          offset={70}
           onClick={() => editOrder(item)}
           className='edit'
         >
