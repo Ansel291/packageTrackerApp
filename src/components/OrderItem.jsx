@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { IconContext } from 'react-icons/lib'
 import { MdCallReceived, MdNewLabel, MdLocalShipping } from 'react-icons/md'
+import { Link } from 'react-scroll'
 import { RiUserReceived2Fill } from 'react-icons/ri'
 import OrderContext from '../context/OrderContext'
 
@@ -40,9 +41,18 @@ function OrderItem({ item }) {
         <button onClick={() => deleteOrder(item.id)} className='close'>
           <FaTimes />
         </button>
-        <button onClick={() => editOrder(item)} className='edit'>
+        <Link
+          to='header'
+          smooth={true}
+          duration={300}
+          spy={true}
+          exact='true'
+          offset={0}
+          onClick={() => editOrder(item)}
+          className='edit'
+        >
           <FaEdit />
-        </button>
+        </Link>
         <div className='order-number-display'>
           <span className='order-number-label'>Order Number: </span>
           {item.orderNumber}

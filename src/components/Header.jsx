@@ -12,7 +12,7 @@ function Header() {
         className: 'package-icon',
       }}
     >
-      <header>
+      <header id='header'>
         <div className='container'>
           <Link to='/'>
             <div className='header-container'>

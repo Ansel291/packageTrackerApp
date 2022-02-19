@@ -75,7 +75,8 @@ export const OrderProvider = ({ children }) => {
 
   // Set Order to be updated
   const editOrder = (item) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    //window.scrollTo({ top: 0, behavior: 'smooth' })
+    //scroll.scrollToTop()
     setTimeout(() => {
       setOrderEdit({
         item,
