@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom'
 
 function HomeIconLink() {
   return (
-    <IconContext.Provider
-      value={{
-        size: '1.8em',
-      }}
-    >
+    <IconContext.Provider value={{}}>
       <div className='home-link'>
         <Link to='/'>
           <AiOutlineHome />
