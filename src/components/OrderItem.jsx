@@ -34,7 +34,7 @@ function OrderItem({ item }) {
             <RiUserReceived2Fill />
           </div>
         )}
-        <Link onClick={() => deleteOrder(item.id)} className='close'>
+        <Link to='/' onClick={() => deleteOrder(item.id)} className='close'>
           <FaTimes />
         </Link>
         <Link
