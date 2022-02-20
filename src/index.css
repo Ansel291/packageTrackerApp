@@ -2,10 +2,27 @@
 
 :root {
   --color-primary: #fff;
-  --color-order-received: #ff9900;
-  --color-label-created: #ff3f3f;
-  --color-in-transit: #48b9fb;
-  --color-order-delivered: #54d175;
+  /*--color-order-received: #ff9900;*/
+  --color-order-received: linear-gradient(
+    330deg,
+    #dd8d15 17.33%,
+    #f9b756 77.85%
+  );
+  /*--color-label-created: #ff3f3f;*/
+  --color-label-created: linear-gradient(
+    330deg,
+    #d94040 17.33%,
+    #ff6569 77.85%
+  );
+  /*--color-in-transit: #48b9fb; */
+  --color-in-transit: linear-gradient(330deg, #2e87c5 17.33%, #2facdb 77.85%);
+  /*--color-in-transit: linear-gradient(330deg, #358fc3 17.33%, #5bc3ff 77.85%);*/
+  /*--color-order-delivered: #54d175; */
+  --color-order-delivered: linear-gradient(
+    330deg,
+    #42b060 17.33%,
+    #68cc83 77.85%
+  );
   --box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 42.5%);
 }
 

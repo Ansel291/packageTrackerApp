@@ -4,6 +4,7 @@
 
 .open-order-title {
   text-align: center;
+  text-shadow: 2px 2px 2px rgb(7 3 2 / 25%);
 }
 
 .order-stat-item {
@@ -15,6 +16,7 @@
   margin-top: 10px;
   -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
+  text-shadow: 1px 1px 4px rgb(7 3 2 / 25%);
 }
 
 .order-stat-order-received {

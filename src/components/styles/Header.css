@@ -22,6 +22,7 @@ header a {
   color: var(--color-primary);
   text-decoration: none;
   font-size: 22px;
+  text-shadow: 2px 2px 2px rgb(7 3 2 / 20%);
 }
 
 .package-icon {
