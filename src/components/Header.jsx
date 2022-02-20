@@ -8,7 +8,7 @@ function Header() {
     <IconContext.Provider
       value={{
         color: 'white',
-        size: '2em',
+        size: '1.9em',
         className: 'package-icon',
       }}
     >
