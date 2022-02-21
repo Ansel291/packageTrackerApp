@@ -7,7 +7,6 @@ import OrderContext from '../context/OrderContext'
 
 function OrderForm() {
   const [orderStatus, setOrderStatus] = useState('orderReceived')
-  //const [orderStatus, setOrderStatus] = useState('')
   const [orderNumber, setOrderNumber] = useState('')
   const [orderHasNotes, setOrderHasNotes] = useState(false)
   const [orderNote, setOrderNote] = useState('')
@@ -89,7 +88,7 @@ function OrderForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    //console.log('handle submit click')
+
     let orderNumberTextValOnSubmit = orderNumber.trim()
 
     //console.log(orderNumberTextValOnSubmit)
@@ -118,12 +117,12 @@ function OrderForm() {
         //console.log(orderEdit.edit)
       }
 
-      setOrderStatus('orderReceived')
+      //setOrderStatus('orderReceived')
       setOrderNumber('')
       setOrderHasNotes(false)
       setOrderNote('')
       setOrderBackordered(false)
-      setOrderProgress('progress-order-received')
+      //setOrderProgress('progress-order-received')
       setBtnDisabled(true)
       setOrderUpdated(false)
     }

@@ -104,21 +104,6 @@ label.order-select-order-delivered:hover {
   .progress-bar {
     top: -97px;
   }
-  /*
-  .status li {
-    width: 60px;
-    height: 60px;
-  }
-  .status li label {
-    width: 60px;
-    height: 60px;
-  }
-  .status li svg {
-    position: relative;
-    top: 5px;
-    left: 5px;
-  }
-  */
 }
 
 @media (min-width: 768px) {
@@ -151,40 +136,3 @@ label.order-select-order-delivered:hover {
     top: -122px;
   }
 }
-
-/*
-@media (min-width: 768px) {
-  .status {
-    margin: 32.5px 0 75px;
-  }
-  .status li p {
-    font-size: 12px;
-    margin-top: 82.5px;
-    line-height: 21px;
-  }
-  .status li {
-    width: 100px;
-    height: 100px;
-  }
-  .status li label {
-    width: 100px;
-    height: 100px;
-  }
-  .status li svg {
-    top: 20px;
-    left: 20px;
-    width: 2.5em;
-    height: 2.5em;
-  }
-  .order-status-br {
-    display: none;
-  }
-  .space {
-    margin-right: 2px;
-  }
-  .progress-bar {
-    background-color: #858585;
-    top: -125px;
-  }
-}
-*/
