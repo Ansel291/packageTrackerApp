@@ -17,6 +17,7 @@
 }
 
 .status li label {
+  /*background: linear-gradient(330deg, #c5c5c5 17.33%, #c5c5c5 77.85%);*/
   position: absolute;
   top: 50%;
   left: 50%;

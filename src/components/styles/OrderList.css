@@ -1,0 +1,10 @@
+.no-order {
+  margin: -10px 0 20px;
+  text-shadow: 2px 2px 2px rgb(7 3 2 / 20%);
+}
+
+@media (min-width: 768px) {
+  .no-order {
+    margin: 10px 0 20px;
+  }
+}

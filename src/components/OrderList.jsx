@@ -1,15 +1,20 @@
+import './styles/OrderList.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useContext } from 'react'
 import OrderItem from './OrderItem'
+import Spinner from './shared/Spinner'
 import OrderContext from '../context/OrderContext'
 
 function OrderList() {
-  const { order } = useContext(OrderContext)
+  const { order, isLoading } = useContext(OrderContext)
 
-  if (!order || order.length === 0) {
-    return <p>No Order Yet</p>
+  if (!isLoading && (!order || order.length === 0)) {
+    return <p className='no-order'>No Order Yet</p>
   }
-  return (
+
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <div className='order-list'>
       <AnimatePresence>
         {order.map((item) => (
