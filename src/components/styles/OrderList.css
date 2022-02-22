@@ -1,7 +1,8 @@
 .no-order {
-  margin: -10px 0 20px;
+  margin: -17.5px 0 20px;
   text-shadow: 2px 2px 2px rgb(7 3 2 / 25%);
   font-weight: 600;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
