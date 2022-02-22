@@ -1,3 +1,4 @@
+import './styles/OrderList.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useContext } from 'react'
 import OrderItem from './OrderItem'
@@ -7,7 +8,7 @@ function OrderList() {
   const { order } = useContext(OrderContext)
 
   if (!order || order.length === 0) {
-    return <p>No Order Yet</p>
+    return <p className='no-order'>No Order Yet</p>
   }
   return (
     <div className='order-list'>
