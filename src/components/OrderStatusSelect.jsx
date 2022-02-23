@@ -47,7 +47,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
   return (
     <IconContext.Provider value={{}}>
       <ul className='status'>
-        <li>
+        <li className='order-select-order-received'>
           <input
             type='radio'
             id='radioOrderReceived'
@@ -65,7 +65,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
 
           <p className='status-title'>Order Processed</p>
         </li>
-        <li>
+        <li className='order-select-label-created'>
           <input
             type='radio'
             id='radioLabelCreated'
@@ -86,7 +86,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
             <br className='order-status-br' /> Created
           </p>
         </li>
-        <li>
+        <li className='order-select-in-transit'>
           <input
             type='radio'
             id='radioOrderInTransit'
@@ -109,7 +109,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
             Transit
           </p>
         </li>
-        <li>
+        <li className='order-select-order-delivered'>
           <input
             type='radio'
             id='radioOrderDelivered'
