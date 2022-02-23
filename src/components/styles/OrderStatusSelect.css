@@ -17,6 +17,7 @@
 }
 
 .status li label {
+  background: #c5c5c5;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,23 +50,27 @@
   opacity: 0;
 }
 
+.status li label:hover {
+  background: transparent;
+}
+
 [type='radio']:checked ~ label.order-select-order-received,
-label.order-select-order-received:hover {
+li.order-select-order-received {
   background: var(--color-order-received);
 }
 
 [type='radio']:checked ~ label.order-select-label-created,
-label.order-select-label-created:hover {
+li.order-select-label-created {
   background: var(--color-label-created);
 }
 
 [type='radio']:checked ~ label.order-select-in-transit,
-label.order-select-in-transit:hover {
+li.order-select-in-transit {
   background: var(--color-in-transit);
 }
 
 [type='radio']:checked ~ label.order-select-order-delivered,
-label.order-select-order-delivered:hover {
+li.order-select-order-delivered {
   background: var(--color-order-delivered);
 }
 
