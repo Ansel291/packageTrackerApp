@@ -1,70 +1,73 @@
-# Version Json Server
+# Package Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview:
 
-## Available Scripts
+This is a CRUD React App which acts as a UI prototype for a company that wants to keep track of the status of their packages that is being shipped to their clients.
 
-In the project directory, you can run:
+It easily allows the user to add new package orders, update the status, and delete packages once they have been delivered.
 
-### `npm start`
+Users can create a new order by entering an order number, will be guided by form validation, can choose the item's status, add notes, check whether or not the order is on backorder, as well as update the status of the order, and delete the order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Development:  | NPM Packages:    | Deployment: |
+| ------------- | ---------------- | ----------- |
+| React.js      | create-react-app | Netlify     |
+| CSS           | react-router-dom |             |
+| HTML5         | react-icons      |             |
+| Visual Studio | react-scroll     |             |
+| Github        | json-server      |             |
+|               | framer-motion    |             |
+|               | concurrently     |             |
 
-### `npm test`
+## Deployment / Production URL:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://package-tracker-ja.netlify.app/
 
-### `npm run build`
+Note: The site linked above is a static site. It is not connected to a backend Server. However if you download this current branch and install, the version will have a working JSON Server Mock Backend.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Form:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![App Screenshot](https://i.imgur.com/Qekq69X.png)
 
-### `npm run eject`
+### Re-usable Components:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App Screenshot](https://i.imgur.com/X72Niju.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Milestones:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Components
+- JSX
+- State (Component & App Level)
+- Hooks (ie: useState, useContent, useEffect)
+- Lists & Keys
+- Forms & Validation
+- CRUD Functionality
+- Routing
+- JSON Server Mock Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+#### Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```http
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Run
 
-### Code Splitting
+```http
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Inspiration:
 
-### Analyzing the Bundle Size
+This app is based on Traversy Media's tutorial
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [React Front To Back 2022 - Feedback App](https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29765056#overview)
 
-### Making a Progressive Web App
+## Upcoming Features:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Turning the Project into a MERN app and adding an Express backend
