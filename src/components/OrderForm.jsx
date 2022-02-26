@@ -40,28 +40,23 @@ function OrderForm() {
     } else {
       setBtnDisabled(true)
       if (orderNumberTextVal.charAt(0) !== 'L') {
-        //console.log('Must start w/ LG-')
         setBtnDisabled(true)
         setOrderNumberMessage("*Must start w/ 'LG-'")
       } else {
-        //console.log('Yay it STARTS w/ LG-')
         setBtnDisabled(true)
         if (
           orderNumberTextVal.indexOf('LG-') === -1 &&
           /\d/.test(orderNumberTextVal) === false
         ) {
-          //console.log('Field must contain LG- and a number')
           setBtnDisabled(true)
           setOrderNumberMessage("*Field must contain 'LG-' and number")
         } else if (
           orderNumberTextVal.indexOf('LG-') <= 0 &&
           /\d/.test(orderNumberTextVal) === false
         ) {
-          //console.log('Field missing number')
           setBtnDisabled(true)
           setOrderNumberMessage('*Field missing number')
         } else {
-          //console.log('Yay you have both!')
           setBtnDisabled(false)
           setOrderNumberMessage(null)
         }
@@ -91,7 +86,6 @@ function OrderForm() {
 
     let orderNumberTextValOnSubmit = orderNumber.trim()
 
-    //console.log(orderNumberTextValOnSubmit)
     if (
       orderNumberTextValOnSubmit.charAt(0) === 'L' &&
       orderNumberTextValOnSubmit.indexOf('LG-') <= 0 &&
@@ -108,21 +102,14 @@ function OrderForm() {
 
       if (orderEdit.edit === true) {
         updateOrder(orderEdit.item.id, newOrder)
-        /*
-        setOrderProgress('progress-order-received')
-        */
-        //setProgressBarWidth('progress-order-received')
       } else {
         addOrder(newOrder)
-        //console.log(orderEdit.edit)
       }
 
-      //setOrderStatus('orderReceived')
       setOrderNumber('')
       setOrderHasNotes(false)
       setOrderNote('')
       setOrderBackordered(false)
-      //setOrderProgress('progress-order-received')
       setBtnDisabled(true)
       setOrderUpdated(false)
     }

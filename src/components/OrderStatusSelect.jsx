@@ -7,7 +7,6 @@ import OrderContext from '../context/OrderContext'
 
 function OrderStatusSelect({ orderSelect, progressBar }) {
   const [orderSelected, setOrderSelected] = useState('orderReceived')
-  //const [orderSelected, setOrderSelected] = useState('')
   const [progressBarWidth, setProgressBarWidth] = useState(
     'progress-order-received'
   )
@@ -19,11 +18,7 @@ function OrderStatusSelect({ orderSelect, progressBar }) {
       console.log('the order edit selected is true')
       setOrderSelected(orderEdit.item.orderStatus)
       setProgressBarWidth(orderEdit.item.orderProgress)
-      //orderEdit.edit = false
-    } /*else {
-      setOrderSelected('orderReceived')
-      setProgressBarWidth('progress-order-received')
-    }*/
+    }
   }, [orderEdit])
 
   const handleChange = (e) => {
