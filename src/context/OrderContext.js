@@ -57,8 +57,14 @@ export const OrderProvider = ({ children }) => {
 
   // Delete Order
   const deleteOrder = (id) => {
-    if (window.confirm('Are you sure you want to delete?')) {
-      setOrder(order.filter((item) => item.id !== id))
+    if (orderEdit.edit) {
+      window.confirm(
+        "You have an order that is expecting an update.  Must click 'Update' first before delete is allowed."
+      )
+    } else {
+      if (window.confirm('Are you sure you want to delete?')) {
+        setOrder(order.filter((item) => item.id !== id))
+      }
     }
   }
 
